@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Automation Page</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			text-align: center;
+			padding: 50px;
+		}
+		h1 {
+			font-size: 36px;
+			margin-bottom: 20px;
+		}
+		p {
+			font-size: 18px;
+			margin-bottom: 10px;
+		}
+		button {
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+			margin-bottom: 20px;
+		}
+		button:hover {
+			background-color: #3e8e41;
+		}
+		input[type="text"] {
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			box-shadow: 0 0 5px rgba(0,0,0,0.1);
+			margin-bottom: 20px;
+			font-size: 16px;
+			width: 300px;
+		}
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			text-align: left;
+			margin-bottom: 20px;
+		}
+		li {
+			padding: 5px 10px;
+			border-radius: 5px;
+			background-color: #f5f5f5;
+			margin-bottom: 5px;
+			font-size: 16px;
+			box-shadow: 0 0 5px rgba(0,0,0,0.1);
+		}
+	</style>
+</head>
+<body>
+	<h1>Test Automation Page</h1>
+	<p>Welcome to this simple web page to test automation on.</p>
+	<p>Enter your name below:</p>
+	<input type="text" id="name" placeholder="Enter your name here...">
+	<p>Click the button below to add your name to the list:</p>
+	<button id="add-btn">Add Name to List</button>
+	<p>Current List:</p>
+	<ul id="name-list">
+		<li>Daniel</li>
+		<li>Antonio</li>
+	</ul>
+	<button id="clear-btn">Clear List</button>
+	<script>
+		document.getElementById("add-btn").addEventListener("click", function() {
+			var nameInput = document.getElementById("name");
+			var nameList = document.getElementById("name-list");
+			var name = nameInput.value;
+			if (name) {
+				var li = document.createElement("li");
+				li.appendChild(document.createTextNode(name));
+				nameList.appendChild(li);
+				nameInput.value = "";
+			}
+		});
+
+		document.getElementById("clear-btn").addEventListener("click", function() {
+			var nameList = document.getElementById("name-list");
+			nameList.innerHTML = "";
+		});
+	</script>
+</body>
+</html>
