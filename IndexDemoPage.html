@@ -1,90 +1,113 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Test Automation Page</title>
+	<title>Demo Page</title>
 	<style>
 		body {
 			font-family: Arial, sans-serif;
-			text-align: center;
-			padding: 50px;
-		}
-		h1 {
-			font-size: 36px;
-			margin-bottom: 20px;
-		}
-		p {
-			font-size: 18px;
-			margin-bottom: 10px;
-		}
-		button {
-			background-color: #4CAF50;
-			color: white;
-			border: none;
-			padding: 10px 20px;
-			border-radius: 5px;
-			cursor: pointer;
-			font-size: 16px;
-			margin-bottom: 20px;
-		}
-		button:hover {
-			background-color: #3e8e41;
-		}
-		input[type="text"] {
-			padding: 10px;
-			border-radius: 5px;
-			border: none;
-			box-shadow: 0 0 5px rgba(0,0,0,0.1);
-			margin-bottom: 20px;
-			font-size: 16px;
-			width: 300px;
-		}
-		ul {
-			list-style: none;
 			margin: 0;
 			padding: 0;
-			text-align: left;
-			margin-bottom: 20px;
 		}
-		li {
-			padding: 5px 10px;
-			border-radius: 5px;
-			background-color: #f5f5f5;
-			margin-bottom: 5px;
+
+		header {
+			background-color: #333;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+		}
+
+		nav {
+			background-color: #f2f2f2;
+			overflow: hidden;
+			padding: 20px;
+		}
+
+		nav a {
+			float: left;
 			font-size: 16px;
-			box-shadow: 0 0 5px rgba(0,0,0,0.1);
+			font-weight: bold;
+			padding: 12px 20px;
+			text-align: center;
+			text-decoration: none;
+			color: #333;
+		}
+
+		nav a:hover {
+			background-color: #ddd;
+			color: #333;
+		}
+
+		main {
+			margin: 20px;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 20px;
+		}
+
+		section {
+			background-color: #f2f2f2;
+			padding: 20px;
+			text-align: center;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+		}
+
+		h2 {
+			font-size: 28px;
+			margin-top: 0;
+		}
+
+		h3 {
+			font-size: 24px;
+			margin-top: 0;
+		}
+
+		ul {
+			list-style-type: none;
+			padding: 0;
+		}
+
+		li {
+			padding: 5px;
+		}
+
+		.btn {
+			background-color: #333;
+			border: none;
+			color: #fff;
+			padding: 10px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		.btn:hover {
+			background-color: #555;
 		}
 	</style>
 </head>
 <body>
-	<h1>Test Automation Page</h1>
-	<p>Welcome to this simple web page to test automation on.</p>
-	<p>Enter your name below:</p>
-	<input type="text" id="name" placeholder="Enter your name here...">
-	<p>Click the button below to add your name to the list:</p>
-	<button id="add-btn">Add Name to List</button>
-	<p>Current List:</p>
-	<ul id="name-list">
-		<li>Daniel</li>
-		<li>Antonio</li>
-	</ul>
-	<button id="clear-btn">Clear List</button>
-	<script>
-		document.getElementById("add-btn").addEventListener("click", function() {
-			var nameInput = document.getElementById("name");
-			var nameList = document.getElementById("name-list");
-			var name = nameInput.value;
-			if (name) {
-				var li = document.createElement("li");
-				li.appendChild(document.createTextNode(name));
-				nameList.appendChild(li);
-				nameInput.value = "";
-			}
-		});
-
-		document.getElementById("clear-btn").addEventListener("click", function() {
-			var nameList = document.getElementById("name-list");
-			nameList.innerHTML = "";
-		});
-	</script>
-</body>
-</html>
+	<header>
+		<h1>Daniel's Demo Page</h1>
+		<p>Welcome to my demo page where I showcase some of my skills and interests!</p>
+	</header>
+	<nav>
+		<a href="#about">About Me</a>
+		<a href="#projects">Projects</a>
+		<a href="#interests">Interests</a>
+		<a href="#contact">Contact Me</a>
+	</nav>
+	<main>
+		<section id="about">
+			<h2>About Me</h2>
+			<img src="https://via.placeholder.com/300x300.png?text=Profile+Picture" alt="Profile Picture">
+			<p>Hi there! My name is Daniel and I'm a software engineer based in California. I have a passion for creating intuitive and efficient software that helps people solve problems and get things done.</p>
+		</section>
+		<section id="projects">
+			<h2>Projects</h2>
+			<ul>
+				<li><a href="https://github.com/DBalto/DemoPage">Demo Page</a> - A demo page showcasing my skills and interests</li>
+				<li><a href="https://github.com/DBalto/WeatherApp">Weather App</a
