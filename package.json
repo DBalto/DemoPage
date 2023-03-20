@@ -1,0 +1,22 @@
+{
+  "name": "demopage",
+  "version": "1.0.0",
+  "description": "DemoPage for Cypress testing",
+  "main": "Tests.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DBalto/DemoPage.git"
+  },
+  "author": "Daniel Baltodano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DBalto/DemoPage/issues"
+  },
+  "homepage": "https://github.com/DBalto/DemoPage#readme",
+  "dependencies": {
+    "cypress": "^12.8.1"
+  }
+}
