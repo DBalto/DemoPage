@@ -16,7 +16,7 @@
     "url": "https://github.com/DBalto/DemoPage/issues"
   },
   "homepage": "https://github.com/DBalto/DemoPage#readme",
-  "dependencies": {
+  "devDependencies": {
     "cypress": "^12.8.1"
   }
 }
