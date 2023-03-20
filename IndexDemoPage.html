@@ -87,6 +87,70 @@
 		.btn:hover {
 			background-color: #555;
 		}
+
+		.carousel-container {
+			position: relative;
+			overflow: hidden;
+			width: 500px;
+			height: 300px;
+			margin: 0 auto;
+		}
+
+		.carousel {
+			display: flex;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 500%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			animation: slide 10s linear infinite;
+		}
+
+		.carousel li {
+			flex: 1 0 0;
+			height: 100%;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.carousel img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+
+		@keyframes slide {
+			0% {
+				left: 0;
+			}
+			20% {
+				left: 0;
+			}
+			25% {
+				left: -100%;
+			}
+			45% {
+				left: -100%;
+			}
+			50% {
+				left: -200%;
+			}
+			70% {
+				left: -200%;
+			}
+			75% {
+				left: -300%;
+			}
+			95% {
+				left: -300%;
+			}
+			100% {
+				left: -400%;
+			}
+		}
 	</style>
 </head>
 <body>
@@ -146,11 +210,13 @@
 		</section>
 		<section id="contact">
 			<h2>Contact Me</h2>
-			<ul>
-				<li> da.balto@gmail.com</li>
-				<li> +506 8561-1029</li>
-				<li><a href="https://github.com/DBalto">GitHub</a> - Overview</li>
-				<li><a href="https://www.hackerrank.com/da_balto">Hacker Rank</a> - Profile</li>
-				<li><a href="https://www.linkedin.com/in/daniel-baltodano-mora/">Linkedin</a> - Profile</li>
-			</ul>
+			<div class="carousel-container">
+				<ul class="carousel">
+					<li> da.balto@gmail.com</li>
+					<li> +506 8561-1029</li>
+					<li><a href="https://github.com/DBalto">GitHub</a> - Overview</li>
+					<li><a href="https://www.hackerrank.com/da_balto">Hacker Rank</a> - Profile</li>
+					<li><a href="https://www.linkedin.com/in/daniel-baltodano-mora/">Linkedin</a> - Profile</li>
+				</ul>
+			</div>
 		</section>
