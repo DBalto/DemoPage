@@ -1,6 +1,6 @@
 describe('Test Automation Page', () => {
   beforeEach(() => {
-    cy.visit('path/to/your/test/automation/page');
+    cy.visit('https://htmlpreview.github.io/?https://github.com/DBalto/DemoPage/blob/main/IndexDemoPage.html');
   });
 
   it('should add a name to the list', () => {
