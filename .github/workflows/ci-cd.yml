@@ -28,9 +28,10 @@ jobs:
 
       - name: Build Docker image
         uses: docker/build-push-action@v3
-        context: .
-        push: true
-        tags: docker.io/docker_test:latest
-      env:
-        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        with:
+          ccontext: .
+          push: true
+          tags: docker.io/docker_test:latest
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
