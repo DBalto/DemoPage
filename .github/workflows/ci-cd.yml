@@ -19,7 +19,7 @@ jobs:
     - name: Run tests
       run: node test.js
   
-  build-docker-image:
+  build-push-docker-image:
     needs: build
     runs-on: ubuntu-latest
     steps:
