@@ -28,8 +28,9 @@ jobs:
 
       - name: Build Docker image
         uses: docker/build-push-action@v3
-        with:
-          context: .
-          push: true
-          tags: https://index.docker.io/v1/ActionsDocker:latest
-          # https://index.docker.io/v1/ActionsDocker:latest
+        context: .
+        push: true
+        tags: docker.io/docker_test:latest
+      env:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
