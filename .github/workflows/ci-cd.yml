@@ -31,5 +31,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ActionsDocker:latest
+          tags: https://index.docker.io/v1/ActionsDocker:latest
           # https://index.docker.io/v1/ActionsDocker:latest
